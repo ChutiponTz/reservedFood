@@ -1,0 +1,2 @@
+https://jsonplaceholder.typicode.com/photos
+https://fakestoreapi.com/products
