@@ -14,9 +14,9 @@ const StatementPage = () => {
         <AppGrid bg='#bebebe'  pd='2rem 8rem' justifyContent='center' alignItems='start'>
             <GridItem size='100%'>
                 <BalanceContainer bg='#bebebe' mg='2rem 0rem' justifyContent='space-between' alignItems='start' rgap='1rem'>
-                    <div>
-                        Welcome,{account.user.firstName}{" "}{account.user.lastName}
-                    </div>
+                    {/* <div>
+                        Welcome,{account?.user.firstName}{" "}{account?.user.lastName}
+                    </div> */}
                 </BalanceContainer>
                 <TransactionTable />
             </GridItem>

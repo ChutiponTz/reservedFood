@@ -18,7 +18,6 @@ const CardItem = styled.div<CardItemProps>`
     .card-header{
         height:${({hd_height})=>(`${hd_height?hd_height:'15%'}`)};
         background:${({hd_bg})=>(`${hd_bg?hd_bg:'#fffff'}`)};
-        padding:1rem;
         display:flex;
         justify-content:center;
         align-items:center;
@@ -29,7 +28,6 @@ const CardItem = styled.div<CardItemProps>`
     .card-body{
         height:${({bd_height})=>(`${bd_height?bd_height:'85%'}`)};
         background:${({bd_bg})=>(`${bd_bg?bd_bg:'#555555'}`)};
-        padding:1rem;
         display:flex;
         justify-content:center;
         align-items:center;

@@ -3,17 +3,15 @@ import PhotoPage from "./Photo/pages/PhotoPage";
 import ErrorPage from "./Other/pages/ErrorPage";
 import SigninPage from "./Authen/pages/SigninPage";
 import SignupPage from "./Authen/pages/SignupPage";
-import DepositWithdrawPage from "./Transaction/pages/DepositWithdrawPage";
-import TransferPage from "./Transaction/pages/TransferPage";
 import StatementPage from "./Transaction/pages/StatementPage";
+import SinglePage from "./Home/pages/SinglePage";
 
 export {
     HomePage,
     PhotoPage,
     SigninPage,
     SignupPage,
-    DepositWithdrawPage,
-    TransferPage,
     StatementPage,
-    ErrorPage
+    ErrorPage,
+    SinglePage
 }

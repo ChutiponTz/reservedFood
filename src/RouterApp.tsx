@@ -13,18 +13,19 @@ import {
   PhotoPage,
   SigninPage,
   SignupPage,
-  DepositWithdrawPage,
-  TransferPage,
   StatementPage,
-  ErrorPage
+  ErrorPage,
+  SinglePage
 } from './modules/index'
 
 const AuthWrapper:FC<any> = ({children})=>{
   const { user } = useAppSelector(state => state.auth)
     // let navigate = useNavigate();
     let location = useLocation();
-    if(!user) return <Navigate to="/signin" state={{ from: location }} replace />;
-    return children
+    if(!user) {
+      return <Navigate to="/signin" state={{ from: location }} replace />;
+    }
+    return children ;
 }
 
 const ProtectWrapper:FC<any> = ()=>{
@@ -62,9 +63,8 @@ const RouterApp = () => {
         </Route>
         <Route path='/signin' element={<SigninPage/>}/>
         <Route path='/signup' element={<SignupPage/>}/>
-        <Route path='/depositAndWithdraw' element={<DepositWithdrawPage/>}/>
-        <Route path='/transfer' element={<TransferPage/>}/>
         <Route path='/statement' element={<StatementPage/>}/>
+        <Route path='/:storeId' element={<SinglePage/>}/>
         <Route path='*' element={<ErrorPage />} />
       </Routes>
     </Router>

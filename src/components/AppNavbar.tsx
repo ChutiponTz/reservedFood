@@ -19,7 +19,7 @@ const AppNavbar:FC<AppNavbarProps> = ({toggle,scrollWithOffset}) => {
     <Nav>
     <NavLink to='/'>
         <div className='logo'>
-            Restaurant Main
+            Restaurant Reserve
     </div>
     </NavLink>
     <Bars onClick={toggle}/>
