@@ -9,6 +9,7 @@ import { useGetDataStoreDetail } from '../../../hooks/StoreHook'
 import { useReserved } from '../../../hooks/TransactionHook'
 import {Select,Form,InputNumber,Button} from 'antd'
 import { Link } from 'react-router-dom'
+import dayjs from 'dayjs'
 
 const SinglePage = () => {
   const {storeId} = useParams();
@@ -47,6 +48,7 @@ const SinglePage = () => {
         storeId: resultDataDetail._id,
         reservedQty:values.qty,
         reservedTime: values.reserveTime,
+        reservedDate: dayjs().format('YYYY-MM-DD'),
         type:'reserved'
     }
 
