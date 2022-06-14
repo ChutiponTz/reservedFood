@@ -23,28 +23,13 @@ const AppSidebar:FC<AppSidebarProps> = ({isOpen,toggle,scrollWithOffset}) => {
     </Icon>
     <SidebarWrapper>
         <SidebarMenu>
-            <SidebarLink to='#section1' smooth scroll={(el:HTMLElement) =>  scrollWithOffset(el, 80)}>
+            <SidebarLink to='/statement' smooth scroll={(el:HTMLElement) =>  scrollWithOffset(el, 80)}>
             Section 1
             </SidebarLink>
-            <SidebarLink to='#section2' smooth scroll={(el:HTMLElement) =>  scrollWithOffset(el, 80)}>
+            {/* <SidebarLink to='#section2' smooth scroll={(el:HTMLElement) =>  scrollWithOffset(el, 80)}>
             Section 2
-            </SidebarLink>
-            <SidebarLink to='#section3' smooth scroll={(el:HTMLElement) =>  scrollWithOffset(el, 80)}>
-            Section 3
-            </SidebarLink>
-            <SidebarLink to='#section4' smooth scroll={(el:HTMLElement) =>  scrollWithOffset(el, 80)}>
-            Section 4
-            </SidebarLink>
-            <SidebarLink to='#section5' smooth scroll={(el:HTMLElement) =>  scrollWithOffset(el, 80)}>
-            Section 5
-            </SidebarLink>
+            </SidebarLink> */}
         </SidebarMenu>
-        <SideBtnWrap>
-            <SidebarRoute href='https://github.com/cinecus' target='_blank'>
-            <FaGithub size={18}/>
-                My Github
-            </SidebarRoute>
-        </SideBtnWrap>
     </SidebarWrapper>
 </SidebarContainer>
   )
