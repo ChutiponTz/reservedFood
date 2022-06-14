@@ -1,5 +1,4 @@
-import React,{FC, useState} from 'react'
-import styled from 'styled-components'
+import React,{useState} from 'react'
 import AppWrapper from '../../../components/AppWrapper'
 import AppGrid from '../../../components/AppGrid'
 import GridItem from '../../../components/GridItem'
@@ -7,10 +6,7 @@ import CardItem from '../../../components/CardItem'
 import { useGetDataStore } from '../../../hooks/StoreHook'
 import { Link } from 'react-router-dom'
 
-// import { usePhotos } from '../../../hooks/usePhotos'
-// import { usePosts } from '../../../hooks/usePosts'
 
-// import {useAppSelector} from '../../../store/store'
 
 const HomePage= (props:any) => {
 
@@ -19,7 +15,6 @@ const HomePage= (props:any) => {
     const [input,setInput] = useState("");
     const resultGetData = data?.result.result;
 
-    //const [storeList, setStoreList] = useState(resultGetData);
 
     const handlerChange = (event:any) => {
         const keyword = event.target.value;

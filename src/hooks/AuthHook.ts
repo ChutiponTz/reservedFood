@@ -1,8 +1,7 @@
 import { useMutation, useQuery } from "react-query";
-import {GET,POST,DELAY} from '../api/index'
+import {GET,POST} from '../api/index'
 import { useAppDispatch } from "../store/store";
 import { signIn,signUp ,getInfo} from "../store/slices/authSlice";
-import { url } from "../api/url";
 import {GET_ACCOUNT_INFO, SIGNIN,SIGNUP} from '../api/api_route'
 
 export const useSignIn:any=()=>{

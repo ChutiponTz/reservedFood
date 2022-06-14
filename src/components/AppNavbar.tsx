@@ -23,35 +23,11 @@ const AppNavbar:FC<AppNavbarProps> = ({toggle,scrollWithOffset}) => {
     </div>
     </NavLink>
     <Bars onClick={toggle}/>
-    <NavMenu>
-        
-        {/* <NavLink  to='#section1' smooth scroll={(el:HTMLElement) =>  scrollWithOffset(el, 80)} >
-            Section 1
-        </NavLink>
-        <NavLink to='#section2' smooth scroll={(el:HTMLElement) =>  scrollWithOffset(el, 80)}  >
-            Section 2
-        </NavLink>
-        <NavLink  to='#section3' smooth scroll={(el:HTMLElement) =>  scrollWithOffset(el, 80)} >
-            Section 3
-        </NavLink>
-        <NavLink to='#section4' smooth scroll={(el:HTMLElement) =>  scrollWithOffset(el, 80)}  >
-            Section 4
-        </NavLink>
-        <NavLink to='#section5' smooth scroll={(el:HTMLElement) =>  scrollWithOffset(el, 80)}  >
-            Section 5
-        </NavLink> */}
-    </NavMenu>
     <NavBtn>
         {localStorage.getItem('token')?<>
         <NavLink  to='/statement'  >
             History
         </NavLink>
-        {/* <NavLink  to='/depositAndWithdraw'  >
-            Deposit/Withdraw
-        </NavLink>
-        <NavLink  to='/transfer' >
-            Transfer
-        </NavLink> */}
             <NavBtnLink onClick={()=>dispatch(signOut())}>
             <FaSignOutAlt size={18}/>
                 Sign Out

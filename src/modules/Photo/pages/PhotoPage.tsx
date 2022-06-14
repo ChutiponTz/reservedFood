@@ -1,14 +1,11 @@
-import React,{FC,useState} from 'react'
+import {FC} from 'react'
 import AppWrapper from '../../../components/AppWrapper'
 import AppGrid from '../../../components/AppGrid'
 import GridItem from '../../../components/GridItem'
 import { usePhotos } from '../../../hooks/PhotoHook'
-import { usePosts } from '../../../hooks/PostHook'
 import { Photo } from '../../../types'
 import CardPhoto from '../components/CardPhoto'
 
-
-import {useAppSelector} from '../../../store/store'
 
 
 

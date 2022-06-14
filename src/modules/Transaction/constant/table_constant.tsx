@@ -1,7 +1,6 @@
 import type { ColumnsType } from 'antd/lib/table';
-import { Table, Tag, Space } from 'antd';
+import { Tag } from 'antd';
 import moment from 'moment'
-import { formatNumber } from '../../../Function';
 
 interface DataType {
     key: string

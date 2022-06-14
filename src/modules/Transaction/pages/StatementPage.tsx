@@ -32,12 +32,3 @@ const BalanceContainer = styled(AppGrid)`
         justify-content:center;
     }
 `
-
-const FilterContainer = styled(AppGrid)`
-    border-radius:1rem;
-`
-
-const TableContainer = styled(AppGrid)`
-    margin-top:2em;
-    border-radius:1rem;
-`

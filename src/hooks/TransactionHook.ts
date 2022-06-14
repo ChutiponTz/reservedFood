@@ -1,7 +1,6 @@
 import { useMutation, useQuery } from "react-query";
-import {GET,POST,DELAY} from '../api/index'
-import { signIn } from "../store/slices/authSlice";
-import { url } from "../api/url";
+import {POST} from '../api/index'
+
 import { RESERVED } from "../api/api_route";
 import { SuccessModal,ErrorModal } from "../components/AppModal";
 

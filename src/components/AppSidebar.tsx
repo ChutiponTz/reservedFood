@@ -26,9 +26,6 @@ const AppSidebar:FC<AppSidebarProps> = ({isOpen,toggle,scrollWithOffset}) => {
             <SidebarLink to='/statement' smooth scroll={(el:HTMLElement) =>  scrollWithOffset(el, 80)}>
             Section 1
             </SidebarLink>
-            {/* <SidebarLink to='#section2' smooth scroll={(el:HTMLElement) =>  scrollWithOffset(el, 80)}>
-            Section 2
-            </SidebarLink> */}
         </SidebarMenu>
     </SidebarWrapper>
 </SidebarContainer>

@@ -12,6 +12,5 @@ const photoSlice = createSlice({
     }
 })
 
-export const {} = photoSlice.actions
 
 export default photoSlice.reducer

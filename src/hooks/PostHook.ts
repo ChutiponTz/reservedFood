@@ -1,8 +1,7 @@
 import { useMutation } from "react-query";
-import {GET,POST,DELAY} from '../api/index'
+import {POST} from '../api/index'
 import { useAppDispatch } from "../store/store";
 import { setPost } from "../store/slices/postSlice";
-import { message } from "antd";
 
 export const usePosts=()=>{
     const dispatch = useAppDispatch()

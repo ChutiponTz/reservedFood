@@ -1,9 +1,7 @@
-import { useMutation, useQuery } from "react-query";
-import {GET,POST,DELAY} from '../api/index'
-import { signIn } from "../store/slices/authSlice";
-import { url } from "../api/url";
+import { useQuery } from "react-query";
+import {GET} from '../api/index'
+
 import { GET_STOREMAIN , GET_STOTE_BYID } from "../api/api_route";
-import { SuccessModal,ErrorModal } from "../components/AppModal";
 
 export const useGetDataStore:any=()=>{
     return useQuery('store',()=>GET(GET_STOREMAIN,{headers: {

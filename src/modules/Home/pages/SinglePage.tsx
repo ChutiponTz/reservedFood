@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
+import { useState } from 'react'
 import AppWrapper from '../../../components/AppWrapper'
 import AppGrid from '../../../components/AppGrid'
 import CardItem from '../../../components/CardItem'
@@ -8,12 +7,11 @@ import { useParams } from 'react-router-dom'
 import { useGetDataStoreDetail } from '../../../hooks/StoreHook'
 import { useReserved } from '../../../hooks/TransactionHook'
 import {Select,Form,InputNumber,Button} from 'antd'
-import { Link } from 'react-router-dom'
 import dayjs from 'dayjs'
 
 const SinglePage = () => {
   const {storeId} = useParams();
-  const {data,isLoading,error} = useGetDataStoreDetail(storeId);
+  const {data,isLoading} = useGetDataStoreDetail(storeId);
   const body = useReserved();
   const resultDataDetail = data?.result.result;
 
