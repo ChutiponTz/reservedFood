@@ -15,6 +15,7 @@ interface AppNavbarProps {
 const AppNavbar:FC<AppNavbarProps> = ({toggle,scrollWithOffset}) => {
     const {user} = useAppSelector(state=>state.auth)
     const dispatch = useAppDispatch()
+    //console.log(user);
   return (
     <Nav>
     <NavLink to='/'>
@@ -35,13 +36,13 @@ const AppNavbar:FC<AppNavbarProps> = ({toggle,scrollWithOffset}) => {
         </>
         :
         <>
-         <NavBtnLink href='/signin'>
+         <NavBtnLink href='/signup'>
             <FaUser size={18}/>
-                Sign In
+            New Account
         </NavBtnLink>
-            <NavBtnLink href='/signup' >
+            <NavBtnLink href='/signin' >
             <FaUser size={18}/>
-                New Account
+            Sign In
         </NavBtnLink>
         </>
         }

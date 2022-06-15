@@ -8,7 +8,7 @@ import {useAppSelector} from '../../../store/store'
 
 const StatementPage = () => {
     const account = useAppSelector(state=>state.auth)
-    console.log('account :>> ', account);
+    //console.log('account :>> ', account);
   return (
     <AppWrapper>
         <AppGrid bg='#bebebe'  pd='2rem 8rem' justifyContent='center' alignItems='start'>
