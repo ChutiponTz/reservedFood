@@ -5,13 +5,14 @@ import GridItem from '../../../components/GridItem'
 import CardItem from '../../../components/CardItem'
 import { useGetDataStore } from '../../../hooks/StoreHook'
 import { Link } from 'react-router-dom'
+import dayjs from 'dayjs'
 
 
 
 const HomePage= (props:any) => {
 
     const {data,isLoading} = useGetDataStore();
-
+    const currentTime = parseInt(dayjs().format('HH'));
     const [input,setInput] = useState("");
     const resultGetData = data?.result.result;
 
@@ -24,10 +25,11 @@ const HomePage= (props:any) => {
     if(isLoading) return <h1>loading...</h1>
 
   return (
+    
     <AppWrapper>
         <AppGrid id='mainGrid' bg='#FFFFFF' height='10vh' pd='3rem 8rem' cgap='2%' rgap='2rem'>
             <div className="row g-3 align-items-center mt-4 justify-content-center">
-                <div className="col-4">
+                <div>
                     <input
                         type="text"
                         className="form-control"
@@ -50,9 +52,8 @@ const HomePage= (props:any) => {
                     }).map((rowCard:any)=> {
                         return (
                             <>
-                                
                                     <GridItem size='30%'  bg='#f1f1f1'>
-                                        <Link to={"/"+rowCard._id}>
+                                        <Link style={{ pointerEvents: (currentTime+1 >= parseInt(rowCard.closeStore)) ? 'none' : 'auto' }} to={"/"+rowCard._id}>
                                             <CardItem hd_height='20%' bd_height='50%' ft_height='10%' height='400px'>
                                                 <div className='card-header'>
                                                     {rowCard.storeName}
@@ -61,15 +62,13 @@ const HomePage= (props:any) => {
                                                     <img src={rowCard.picUrl} />
                                                 </div>
                                                 <div className='card-footer'>
-                                                    <div>
+                                                    <p style={{ color: (currentTime+1 >= parseInt(rowCard.closeStore)) ? 'red' : '' }} >
                                                         Open : {rowCard.openStore} - {rowCard.closeStore}
-                                                    </div>
-                                                
+                                                    </p>
                                                 </div>
                                             </CardItem>
                                         </Link>
                                     </GridItem>
-                                
                             </>
                         )    
                         

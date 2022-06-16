@@ -18,9 +18,10 @@ const SinglePage = () => {
   const [input,setInput] = useState();
   const [lengthTime, setLengthTime] = useState(0);
 
-  const generateSlot:any=(open:string='10:00:00',close:string='20:00:00')=>{
-     
-    const [timeOpen,timeClose] = [+open.split(':')[0], +close.split(':')[0]]
+  const generateSlot:any=(close:string='23:00:00')=>{
+    const tempTime = parseInt(dayjs().format('HH'));
+    const currentTime = `${tempTime+1}:00:00`;
+    const [timeOpen,timeClose] = [+currentTime.split(':')[0], +close.split(':')[0]]
     return Array(timeClose-timeOpen).fill(0).map((el,i)=>{
       return { label:`${timeOpen+i}:00 -  ${timeOpen+i+1}:00` ,value:`${timeOpen+i}:00:00`   }
     })
@@ -84,11 +85,11 @@ const SinglePage = () => {
             <Select 
                 placeholder='Select Reserve Time' 
                 onChange={handlerChange}
-                options={resultDataDetail? generateSlot(resultDataDetail?.openStore,resultDataDetail?.closeStore):[]}
+                options={resultDataDetail? generateSlot(resultDataDetail?.closeStore):[]}
             />
             </Form.Item>
             <Form.Item name='qty'>
-              <InputNumber placeholder='Input Reserve Person' required/>
+              <InputNumber placeholder='Input Reserve Person' min="1" required/>
             </Form.Item>
             <Form.Item >
               <h1>จำนวนที่จองได้{" "}{lengthTime} </h1>
